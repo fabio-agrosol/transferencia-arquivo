@@ -1,0 +1,166 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{FEFCCE30-1ACA-4FE7-890C-A64E97862DA3}</ProjectGuid>
+        <ProjectVersion>18.8</ProjectVersion>
+        <FrameworkType>None</FrameworkType>
+        <MainSource>TransferenciaArquivoTests.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Console</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Android' and '$(Base)'=='true') or '$(Base_Android)'!=''">
+        <Base_Android>true</Base_Android>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Android64' and '$(Base)'=='true') or '$(Base_Android64)'!=''">
+        <Base_Android64>true</Base_Android64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='iOSDevice32' and '$(Base)'=='true') or '$(Base_iOSDevice32)'!=''">
+        <Base_iOSDevice32>true</Base_iOSDevice32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='iOSDevice64' and '$(Base)'=='true') or '$(Base_iOSDevice64)'!=''">
+        <Base_iOSDevice64>true</Base_iOSDevice64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='iOSSimulator' and '$(Base)'=='true') or '$(Base_iOSSimulator)'!=''">
+        <Base_iOSSimulator>true</Base_iOSSimulator>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Linux64' and '$(Base)'=='true') or '$(Base_Linux64)'!=''">
+        <Base_Linux64>true</Base_Linux64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+        <DCC_E>false</DCC_E>
+        <DCC_N>false</DCC_N>
+        <DCC_S>false</DCC_S>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+        <Icns_MainIcns>$(BDS)\bin\delphi_PROJECTICNS.icns</Icns_MainIcns>
+        <DCC_UnitSearchPath>$(DUnitX);$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <SanitizedProjectName>TransferenciaArquivoTests</SanitizedProjectName>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Android)'!=''">
+        <DCC_UsePackage>DBXSqliteDriver;RestDatawareCORE;tethering;FlexCel_Report;FireDACDBXDriver;MobilePermissions;RESTBackendComponents;bindengine;CloudService;DataSnapClient;bindcompdbx;IndyIPServer;sparkle;tmsbcl;IndySystem;fmxFireDAC;FlexCel_XlsAdapter;FMXTee;soaprtl;DbxCommonDriver;xmlrtl;soapmidas;DataSnapNativeClient;rtl;DbxClientDriver;IndyIPClient;FMX_FlexCel_Components;aurelius;DataSnapProviderClient;RESTComponents;DBXInterBaseDriver;TMSLogging;FlexCel_Pdf;FMX_FlexCel_Core;emsclientfiredac;DataSnapFireDAC;bindcompfmx;FmxTeeUI;fmx;FireDACIBDriver;dbexpress;IndyCore;xdata;dsnap;emsclient;DataSnapCommon;FireDACCommon;soapserver;FireDACCommonDriver;inet;IndyIPCommon;FireDAC;FireDACSqliteDriver;ibmonitor;FlexCel_Core;ibxpress;ibxbindings;FireDACDSDriver;CustomIPTransport;bindcomp;dbxcds;FlexCel_Render;dsnapxml;dbrtl;IndyProtocols;$(DCC_UsePackage)</DCC_UsePackage>
+        <EnabledSysJars>android-support-v4.dex.jar;cloud-messaging.dex.jar;com-google-android-gms.play-services-ads-base.17.2.0.dex.jar;com-google-android-gms.play-services-ads-identifier.16.0.0.dex.jar;com-google-android-gms.play-services-ads-lite.17.2.0.dex.jar;com-google-android-gms.play-services-ads.17.2.0.dex.jar;com-google-android-gms.play-services-analytics-impl.16.0.8.dex.jar;com-google-android-gms.play-services-analytics.16.0.8.dex.jar;com-google-android-gms.play-services-base.16.0.1.dex.jar;com-google-android-gms.play-services-basement.16.2.0.dex.jar;com-google-android-gms.play-services-gass.17.2.0.dex.jar;com-google-android-gms.play-services-identity.16.0.0.dex.jar;com-google-android-gms.play-services-maps.16.1.0.dex.jar;com-google-android-gms.play-services-measurement-base.16.4.0.dex.jar;com-google-android-gms.play-services-measurement-sdk-api.16.4.0.dex.jar;com-google-android-gms.play-services-stats.16.0.1.dex.jar;com-google-android-gms.play-services-tagmanager-v4-impl.16.0.8.dex.jar;com-google-android-gms.play-services-tasks.16.0.1.dex.jar;com-google-android-gms.play-services-wallet.16.0.1.dex.jar;com-google-firebase.firebase-analytics.16.4.0.dex.jar;com-google-firebase.firebase-common.16.1.0.dex.jar;com-google-firebase.firebase-iid-interop.16.0.1.dex.jar;com-google-firebase.firebase-iid.17.1.1.dex.jar;com-google-firebase.firebase-measurement-connector.17.0.1.dex.jar;com-google-firebase.firebase-messaging.17.5.0.dex.jar;fmx.dex.jar;google-play-billing.dex.jar;google-play-licensing.dex.jar</EnabledSysJars>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Android64)'!=''">
+        <DCC_UsePackage>DBXSqliteDriver;RestDatawareCORE;tethering;FlexCel_Report;FireDACDBXDriver;MobilePermissions;RESTBackendComponents;bindengine;CloudService;DataSnapClient;bindcompdbx;IndyIPServer;sparkle;tmsbcl;IndySystem;fmxFireDAC;FlexCel_XlsAdapter;FMXTee;soaprtl;DbxCommonDriver;xmlrtl;soapmidas;DataSnapNativeClient;rtl;DbxClientDriver;IndyIPClient;FMX_FlexCel_Components;aurelius;DataSnapProviderClient;RESTComponents;DBXInterBaseDriver;TMSLogging;FlexCel_Pdf;FMX_FlexCel_Core;emsclientfiredac;DataSnapFireDAC;bindcompfmx;FmxTeeUI;fmx;FireDACIBDriver;dbexpress;IndyCore;xdata;dsnap;emsclient;DataSnapCommon;FireDACCommon;soapserver;FireDACCommonDriver;inet;IndyIPCommon;FireDAC;FireDACSqliteDriver;ibmonitor;FlexCel_Core;ibxpress;ibxbindings;FireDACDSDriver;CustomIPTransport;bindcomp;dbxcds;FlexCel_Render;dsnapxml;dbrtl;IndyProtocols;$(DCC_UsePackage)</DCC_UsePackage>
+        <EnabledSysJars>android-support-v4.dex.jar;cloud-messaging.dex.jar;com-google-android-gms.play-services-ads-base.17.2.0.dex.jar;com-google-android-gms.play-services-ads-identifier.16.0.0.dex.jar;com-google-android-gms.play-services-ads-lite.17.2.0.dex.jar;com-google-android-gms.play-services-ads.17.2.0.dex.jar;com-google-android-gms.play-services-analytics-impl.16.0.8.dex.jar;com-google-android-gms.play-services-analytics.16.0.8.dex.jar;com-google-android-gms.play-services-base.16.0.1.dex.jar;com-google-android-gms.play-services-basement.16.2.0.dex.jar;com-google-android-gms.play-services-gass.17.2.0.dex.jar;com-google-android-gms.play-services-identity.16.0.0.dex.jar;com-google-android-gms.play-services-maps.16.1.0.dex.jar;com-google-android-gms.play-services-measurement-base.16.4.0.dex.jar;com-google-android-gms.play-services-measurement-sdk-api.16.4.0.dex.jar;com-google-android-gms.play-services-stats.16.0.1.dex.jar;com-google-android-gms.play-services-tagmanager-v4-impl.16.0.8.dex.jar;com-google-android-gms.play-services-tasks.16.0.1.dex.jar;com-google-android-gms.play-services-wallet.16.0.1.dex.jar;com-google-firebase.firebase-analytics.16.4.0.dex.jar;com-google-firebase.firebase-common.16.1.0.dex.jar;com-google-firebase.firebase-iid-interop.16.0.1.dex.jar;com-google-firebase.firebase-iid.17.1.1.dex.jar;com-google-firebase.firebase-measurement-connector.17.0.1.dex.jar;com-google-firebase.firebase-messaging.17.5.0.dex.jar;fmx.dex.jar;google-play-billing.dex.jar;google-play-licensing.dex.jar</EnabledSysJars>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_iOSDevice32)'!=''">
+        <DCC_UsePackage>DBXSqliteDriver;RestDatawareCORE;tethering;FlexCel_Report;FireDACDBXDriver;RESTBackendComponents;bindengine;CloudService;DataSnapClient;bindcompdbx;IndyIPServer;sparkle;tmsbcl;IndySystem;fmxFireDAC;FlexCel_XlsAdapter;FMXTee;soaprtl;DbxCommonDriver;xmlrtl;soapmidas;DataSnapNativeClient;rtl;DbxClientDriver;IndyIPClient;FMX_FlexCel_Components;aurelius;DataSnapProviderClient;RESTComponents;DBXInterBaseDriver;TMSLogging;FlexCel_Pdf;FMX_FlexCel_Core;emsclientfiredac;DataSnapFireDAC;bindcompfmx;FmxTeeUI;fmx;FireDACIBDriver;dbexpress;IndyCore;xdata;dsnap;emsclient;DataSnapCommon;FireDACCommon;soapserver;FireDACCommonDriver;inet;IndyIPCommon;TMSFMXCloudPackPkgDXE12;FireDAC;FireDACSqliteDriver;ibmonitor;FlexCel_Core;ibxpress;ibxbindings;FireDACDSDriver;CustomIPTransport;bindcomp;dbxcds;FlexCel_Render;dsnapxml;dbrtl;IndyProtocols;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_iOSDevice64)'!=''">
+        <DCC_UsePackage>DBXSqliteDriver;RestDatawareCORE;tethering;ACBr_NFe;FlexCel_Report;FireDACDBXDriver;RESTBackendComponents;bindengine;CloudService;ACBr_PAF;DataSnapClient;bindcompdbx;IndyIPServer;ACBr_CTe;sparkle;tmsbcl;IndySystem;ACBre_Social;fmxFireDAC;FlexCel_XlsAdapter;ACBr_SPED;ACBr_MDFe;FMXTee;soaprtl;DbxCommonDriver;xmlrtl;soapmidas;DataSnapNativeClient;rtl;DbxClientDriver;ACBr_Convenio115;TCFLib260;IndyIPClient;FMX_FlexCel_Components;TMSFMXPackPkgDXE12;aurelius;DataSnapProviderClient;ACBr_NFSe;RESTComponents;DBXInterBaseDriver;TMSLogging;FlexCel_Pdf;ACBr_TEFD;FMX_FlexCel_Core;emsclientfiredac;DataSnapFireDAC;bindcompfmx;ACBr_Diversos;FmxTeeUI;fmx;FireDACIBDriver;ACBr_LCDPR;ACBr_Ponto;dbexpress;IndyCore;xdata;dsnap;emsclient;DataSnapCommon;FireDACCommon;ACBR_DeSTDA;soapserver;ACBr_Sintegra;FireDACCommonDriver;inet;IndyIPCommon;TMSFMXCloudPackPkgDXE12;FireDAC;ACBr_Comum;FireDACSqliteDriver;ibmonitor;FlexCel_Core;ibxpress;ibxbindings;FireDACDSDriver;CustomIPTransport;bindcomp;ACBr_Serial;frce;ACBr_BlocoX;dbxcds;FlexCel_Render;ACBr_ANe;dsnapxml;dbrtl;IndyProtocols;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_iOSSimulator)'!=''">
+        <DCC_UsePackage>DBXSqliteDriver;RestDatawareCORE;tethering;FlexCel_Report;FireDACDBXDriver;RESTBackendComponents;bindengine;CloudService;DataSnapClient;bindcompdbx;IndyIPServer;sparkle;tmsbcl;IndySystem;fmxFireDAC;FlexCel_XlsAdapter;FMXTee;soaprtl;DbxCommonDriver;xmlrtl;soapmidas;DataSnapNativeClient;rtl;DbxClientDriver;IndyIPClient;FMX_FlexCel_Components;aurelius;DataSnapProviderClient;RESTComponents;DBXInterBaseDriver;TMSLogging;FlexCel_Pdf;FMX_FlexCel_Core;emsclientfiredac;DataSnapFireDAC;bindcompfmx;FmxTeeUI;fmx;FireDACIBDriver;dbexpress;IndyCore;xdata;dsnap;emsclient;DataSnapCommon;FireDACCommon;soapserver;FireDACCommonDriver;inet;IndyIPCommon;TMSFMXCloudPackPkgDXE12;FireDAC;FireDACSqliteDriver;ibmonitor;FlexCel_Core;ibxpress;ibxbindings;FireDACDSDriver;CustomIPTransport;bindcomp;dbxcds;FlexCel_Render;dsnapxml;dbrtl;IndyProtocols;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Linux64)'!=''">
+        <DCC_UsePackage>FireDACADSDriver;FireDACMSSQLDriver;SKIA_FlexCel_Core;FlexCel_Report;RESTBackendComponents;bindengine;CloudService;FireDACMySQLDriver;DataSnapClient;sparkle;tmsbcl;IndySystem;FireDACInfxDriver;FlexCel_XlsAdapter;emshosting;FireDACTDataDriver;soaprtl;DbxCommonDriver;xmlrtl;soapmidas;DataSnapNativeClient;rtl;emsserverresource;DbxClientDriver;FireDACODBCDriver;DataSnapIndy10ServerTransport;aurelius;FireDACMongoDBDriver;DataSnapServerMidas;RESTComponents;TMSLogging;FlexCel_Pdf;emsclientfiredac;DataSnapFireDAC;DatasnapConnectorsFreePascal;inetdb;emsedge;FireDACIBDriver;dbexpress;IndyCore;xdata;dsnap;emsclient;DataSnapCommon;FireDACCommon;DataSnapConnectors;soapserver;FireDACOracleDriver;FireDACCommonODBC;FireDACCommonDriver;inet;FireDACDb2Driver;FireDAC;FireDACSqliteDriver;FireDACPgDriver;FireDACASADriver;FlexCel_Core;DataSnapServer;CustomIPTransport;bindcomp;dbxcds;FlexCel_Render;dsnapxml;dbrtl;IndyProtocols;$(DCC_UsePackage)</DCC_UsePackage>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <DCC_UsePackage>DBXSqliteDriver;RestDatawareCORE;DBXDb2Driver;vclactnband;vclFireDAC;tethering;FireDACADSDriver;ACBr_BPeDabpeESCPOS;JvPluginSystem;ACBr_BPe;FireDACMSSQLDriver;vcltouch;JvBands;ACBr_NFe;vcldb;SKIA_FlexCel_Core;svn;JvJans;FlexCel_Report;TMSCloudPkgDXE12;ACBr_NFeDanfeESCPOS;TMSFMXCloudPackPkgDEDXE12;JvDotNetCtrls;VCL_FlexCel_Components;vclib;frxTee26;FireDACDBXDriver;MobilePermissions;RESTDWDriverFD;vclx;RESTBackendComponents;ACBr_Reinf;VCLRESTComponents;TMSVCLUIPackPkgWizDXE12;fsTee26;vclie;TMSVCLUIPackPkgDXE12;bindengine;CloudService;JvHMI;FireDACMySQLDriver;CData.MailChimp.D26;ACBr_PAF;fsIBX26;frx26;DataSnapClient;bindcompdbx;ACBr_TCP;IndyIPServer;DBXSybaseASEDriver;ACBr_CTe;sparkle;tmsbcl;IndySystem;fsADO26;frxDBX26;dsnapcon;ACBre_Social;FireDACMSAccDriver;fmxFireDAC;FireDACInfxDriver;vclimg;ACBr_SPEDImportar;Jcl;FlexCel_XlsAdapter;ACBr_SPED;ACBr_MDFe;emshosting;ACBr_LFD;DBXOdbcDriver;FireDACTDataDriver;FMXTee;TMSVCLUIPackPkgXlsDXE12;soaprtl;DbxCommonDriver;JvManagedThreads;xmlrtl;soapmidas;DataSnapNativeClient;fmxobj;JvTimeFramework;rtl;emsserverresource;DbxClientDriver;DBXSybaseASADriver;JvSystem;JvStdCtrls;ACBr_Convenio115;appanalytics;TCFLib260;IndyIPClient;frxPDF26;bindcompvcl;TeeUI;FMX_FlexCel_Components;JvDocking;JvPascalInterpreter;VclSmp;TMSFMXPackPkgDXE12;DelPrintDX103;FireDACODBCDriver;JclVcl;DataSnapIndy10ServerTransport;aurelius;ACBr_Boleto;DataSnapProviderClient;ACBr_SEF2;FireDACMongoDBDriver;JvControls;JvPrintPreview;ACBr_NFSe;DataSnapServerMidas;RESTComponents;DBXInterBaseDriver;TMSLogging;FlexCel_Pdf;ACBr_TEFD;FMX_FlexCel_Core;emsclientfiredac;DataSnapFireDAC;svnui;JvGlobus;DBXMSSQLDriver;JvMM;DatasnapConnectorsFreePascal;bindcompfmx;JvNet;TMSWEBCorePkgLibDXE12;DBXOracleDriver;inetdb;JvAppFrm;ACBr_Diversos;FmxTeeUI;emsedge;CData.Trello.D26;fmx;FireDACIBDriver;fmxdae;ACBr_LCDPR;JvWizards;ACBr_Ponto;fs26;dbexpress;IndyCore;xdata;frxIntIO26;JvPageComps;dsnap;emsclient;DataSnapCommon;FireDACCommon;JvDB;frxcs26;DataSnapConnectors;TMSCloudPkgDEDXE12;ACBR_DeSTDA;soapserver;JclDeveloperTools;FireDACOracleDriver;DBXMySQLDriver;JvCmp;DBXFirebirdDriver;ACBr_Sintegra;FireDACCommonODBC;FireDACCommonDriver;ACBr_GNRE;frxIntIOIndy26;inet;IndyIPCommon;JvCustom;vcl;JvXPCtrls;frxDB26;TMSFMXCloudPackPkgDXE12;FireDACDb2Driver;ACBr_Integrador;fsDB26;TeeDB;FireDAC;JvCore;ACBr_Comum;frxe26;JvCrypt;FireDACSqliteDriver;FireDACPgDriver;ibmonitor;FireDACASADriver;frxIBX26;JvDlgs;JvRuntimeDesign;FlexCel_Core;ibxpress;Tee;DataSnapServer;ibxbindings;vclwinx;FireDACDSDriver;ACBr_OpenSSL;frxADO26;CData.Zendesk.D26;CustomIPTransport;vcldsnap;bindcomp;ACBr_Serial;DBXInformixDriver;TMSVCLUIPackPkgExDXE12;frce;TMSWEBCorePkgDXE12;ACBr_BlocoX;dbxcds;VCL_FlexCel_Core;ACBr_NFCeECFVirtual;adortl;FlexCel_Render;ACBr_ANe;dsnapxml;dbrtl;IndyProtocols;inetdbxpress;JclContainers;ACBr_MTER;frxHTML26;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_DebugDCUs>true</DCC_DebugDCUs>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <DCC_RemoteDebug>true</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <DCC_RemoteDebug>false</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType>Console</Borland.ProjectType>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">TransferenciaArquivoTests.dpr</Source>
+                </Source>
+            </Delphi.Personality>
+            <Deployment Version="3"/>
+            <Platforms>
+                <Platform value="Android">False</Platform>
+                <Platform value="Android64">False</Platform>
+                <Platform value="iOSDevice32">False</Platform>
+                <Platform value="iOSDevice64">False</Platform>
+                <Platform value="iOSSimulator">False</Platform>
+                <Platform value="Linux64">False</Platform>
+                <Platform value="Win32">True</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+    <Import Project="$(MSBuildProjectName).deployproj" Condition="Exists('$(MSBuildProjectName).deployproj')"/>
+</Project>

@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{32F6308E-562C-4E33-8161-5B37181D6EA2}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="TransferenciaArquivo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Tests\TransferenciaArquivoTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TransferenciaArquivo">
+        <MSBuild Projects="TransferenciaArquivo.dproj"/>
+    </Target>
+    <Target Name="TransferenciaArquivo:Clean">
+        <MSBuild Projects="TransferenciaArquivo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TransferenciaArquivo:Make">
+        <MSBuild Projects="TransferenciaArquivo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TransferenciaArquivoTests">
+        <MSBuild Projects="Tests\TransferenciaArquivoTests.dproj"/>
+    </Target>
+    <Target Name="TransferenciaArquivoTests:Clean">
+        <MSBuild Projects="Tests\TransferenciaArquivoTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TransferenciaArquivoTests:Make">
+        <MSBuild Projects="Tests\TransferenciaArquivoTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TransferenciaArquivo;TransferenciaArquivoTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TransferenciaArquivo:Clean;TransferenciaArquivoTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TransferenciaArquivo:Make;TransferenciaArquivoTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
