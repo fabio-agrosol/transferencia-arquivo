@@ -2,7 +2,8 @@ program TransferenciaArquivo;
 
 uses
   Vcl.Forms,
-  TransferenciaArquivoThread in 'TransferenciaArquivoThread.pas';
+  TransferenciaArquivoThread in 'TransferenciaArquivoThread.pas',
+  CriadorBD in 'CriadorBD.pas';
 
 {$R *.res}
 

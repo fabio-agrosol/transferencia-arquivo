@@ -10,7 +10,11 @@ uses
   {$ENDIF }
   DUnitX.Loggers.Console,
   DUnitX.Loggers.Xml.NUnit,
-  DUnitX.TestFramework;
+  DUnitX.TestFramework,
+  TransferenciaArquivoThread in '..\TransferenciaArquivoThread.pas',
+  TransferenciaArquivoThreadTest in 'TransferenciaArquivoThreadTest.pas',
+  CriadorBD in '..\CriadorBD.pas',
+  CriadorBDTest in 'CriadorBDTest.pas';
 
 var
   runner : ITestRunner;
